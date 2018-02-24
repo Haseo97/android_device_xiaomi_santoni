@@ -592,7 +592,7 @@ service config_bt_addr /system/vendor/bin/btnvtool -O
     group bluetooth radio
     oneshot
 
-service hciattach /system//vendor/bin/hci_qcomm_init -e
+service hciattach /system/vendor/bin/hci_qcomm_init -e
     class late_start
     user bluetooth
     group bluetooth net_bt_admin
@@ -794,6 +794,16 @@ service baseband-sh /vendor/bin/init.baseband.sh
     class late_start
     user root
     oneshot
+
+service init_baseband /vendor/bin/init_baseband.sh
+    class late_start
+    user system
+    group shell
+    oneshot
+    disabled
+
+on property:gsm.version.baseband=""
+    start init_baseband
 
 on property:sys.boot_completed=1
     start qcom-post-boot
@@ -1005,7 +1015,7 @@ service time_daemon /system/vendor/bin/time_daemon
     group root
     writepid /dev/cpuset/system-background/tasks
 
-service gx_fpd /system/bin/gx_fpd
+service gx_fpd /system/vendor/bin/gx_fpd
      class core
      user root
      group system system

@@ -334,6 +334,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.baseband.sh \
+    init_baseband.sh \
     init.qcom.post_boot.sh
 
 # RenderScript HAL
@@ -357,11 +358,7 @@ PRODUCT_PACKAGES += \
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext \
-    ims-ext-common \
-    com.android.ims.rcsmanager \
-    com.android.ims.rcsmanager.xml \
-    RcsService \
-    PresencePolling
+    ims-ext-common
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
