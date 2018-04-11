@@ -17,7 +17,7 @@
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/liquid/config/common_full_phone.mk)
+$(call inherit-product, vendor/elixir/config/common_full_phone.mk)
 
 PRODUCT_NAME := elixir_santoni
 BOARD_VENDOR := Xiaomi
