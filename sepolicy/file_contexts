@@ -36,3 +36,6 @@
 
 # Bluetooth
 /(vendor|system/vendor)/bin/hci_qcomm_init	u:object_r:qti_init_shell_exec:s0
+
+# Baseband init
+/(vendor|system/vendor)/bin/init\.baseband\.sh	u:object_r:qti_init_shell_exec:s0
