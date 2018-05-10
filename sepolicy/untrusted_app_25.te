@@ -1,0 +1,5 @@
+allow untrusted_app_25 { tombstone_data_file persist_file adb_data_file }:dir getattr;
+allow untrusted_app_25 rootfs:dir { open read };
+allow untrusted_app_25 { service_contexts_file seapp_contexts_file hwservice_contexts_file }:file getattr;
+allow untrusted_app_25 { sepolicy_file vndservice_contexts_file file_contexts_file }:file getattr;
+allow untrusted_app_25 { nonplat_service_contexts_file init_exec }:file getattr;
