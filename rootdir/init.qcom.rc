@@ -795,7 +795,7 @@ service baseband-sh /vendor/bin/init.baseband.sh
     user root
     oneshot
 
-service init_baseband /vendor/bin/init.baseband.sh
+service init_baseband /vendor/bin/init_baseband.sh
     class late_start
     user system
     group shell
