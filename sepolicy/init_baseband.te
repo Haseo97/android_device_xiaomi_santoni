@@ -1,0 +1,15 @@
+type init_baseband, domain; 
+type init_baseband_exec, exec_type, file_type;
+init_daemon_domain(init_baseband)
+
+allow init_baseband baseband_prop:property_service set; 
+allow init_baseband firmware_file:dir search; 
+allow init_baseband firmware_file:file r_file_perms; 
+allow init_baseband self:capability { dac_override dac_read_search };
+allow init_baseband shell_exec:file { entrypoint read }; 
+allow init_baseband toolbox_exec:file { execute_no_trans open read getattr execute };
+unix_socket_connect(init_baseband, property, init)
+
+allow qti_init_shell init_baseband_exec:file {open read};
+allow qti_init_shell baseband_prop:property_service set;
+
