@@ -802,6 +802,9 @@ service init_baseband /vendor/bin/init.baseband.sh
     oneshot
     disabled
 
+on property:gsm.version.baseband=""
+    start init_baseband
+
 on property:sys.boot_completed=1
     start qcom-post-boot
 
