@@ -795,6 +795,13 @@ service baseband-sh /vendor/bin/init.baseband.sh
     user root
     oneshot
 
+service init_baseband /vendor/bin/init.baseband.sh
+    class late_start
+    user system
+    group shell
+    oneshot
+    disabled
+
 on property:sys.boot_completed=1
     start qcom-post-boot
 
