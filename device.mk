@@ -427,6 +427,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
 
-# Doze
-PRODUCT_PACKAGES += \
-    OneplusThreeDoze
