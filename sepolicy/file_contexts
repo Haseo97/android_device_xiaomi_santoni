@@ -15,9 +15,13 @@
 #/dev/gf66xx-spi				u:object_r:gx_fpd_device:s0
 #/dev/lirc[0-9]*				u:object_r:lirc_device:s0
 
-# Block devices
+# Block Persist
 /dev/block/bootdevice/by-name/persist		u:object_r:persist_block_device:s0
 /dev/block/mmcblk0p26				u:object_r:persist_block_device:s0
+
+# Block Modem
+/dev/block/bootdevice/by-name/modem		u:object_r:modem_block_device:s0
+/dev/block/mmcblk0p1				u:object_r:modem_block_device:s0
 
 # Data files
 /data/misc/netmgr/log\.txt			u:object_r:netmgrd_data_file:s0
@@ -27,7 +31,7 @@
 /proc/touchpanel(/.*)?                          u:object_r:proc_touchpanel:s0
 
 # Camera
-/system/bin/mm-qcamera-daemon			u:object_r:mm-qcamerad_exec:s0
+/vendor/bin/mm-qcamera-daemon			u:object_r:mm-qcamerad_exec:s0
 
 # Debugfs files
 /sys/kernel/debug/rmt_storage(/.*)?             u:object_r:debugfs_rmt:s0
@@ -41,4 +45,4 @@
 #/(vendor|system/vendor)/bin/init.baseband.sh	u:object_r:qti_init_shell_exec:s0
 
 # Baseband second
-/vendor/bin/init.baseband.sh                    u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init_baseband.sh                    u:object_r:init_baseband_exec:s0
