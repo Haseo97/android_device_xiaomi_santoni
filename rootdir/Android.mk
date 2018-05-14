@@ -77,3 +77,21 @@ LOCAL_MODULE_CLASS      := ETC
 LOCAL_SRC_FILES         := etc/init.baseband.sh
 LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := init_baseband.sh
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := etc/init_baseband.sh
+LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR_EXECUTABLES)
+include $(BUILD_PREBUILT)
+
+# Device init scripts
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.santoni.rc
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := init.santoni.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
+include $(BUILD_PREBUILT)

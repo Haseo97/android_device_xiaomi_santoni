@@ -3247,3 +3247,5 @@ misc_link=$(ls -l /dev/block/bootdevice/by-name/misc)
 real_path=${misc_link##*>}
 setprop persist.vendor.mmi.misc_dev_path $real_path
 
+# grep the modem partition for baseband version and set it
+setprop gsm.version.baseband `strings /dev/block/bootdevice/by-name/modem | grep "^MPSS.TA." | head -1`

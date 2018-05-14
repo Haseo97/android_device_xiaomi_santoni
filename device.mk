@@ -347,6 +347,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.baseband.sh \
+    init_baseband.sh \
     init.qcom.post_boot.sh
 
 # RenderScript HAL
@@ -370,11 +371,7 @@ PRODUCT_PACKAGES += \
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext \
-    ims-ext-common \
-    com.android.ims.rcsmanager \
-    com.android.ims.rcsmanager.xml \
-    RcsService \
-    PresencePolling
+    ims-ext-common
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
@@ -397,6 +394,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:system/vendor/etc/thermal-engine.conf
 
 # USB HAL
 PRODUCT_PACKAGES += \
