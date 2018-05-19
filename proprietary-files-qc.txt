@@ -200,7 +200,7 @@ vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 
-# Gatekeeper - from TA-1021 - OPR1.170623.026
+# Gatekeeper
 vendor/lib/hw/gatekeeper.msm8937.so
 vendor/lib64/hw/gatekeeper.msm8937.so
 
@@ -321,9 +321,10 @@ vendor/lib64/libRSDriver_adreno.so
 vendor/lib/libhdr_tm.so
 vendor/lib64/libhdr_tm.so
 
-# Graphics (SDM) - from TA-1021 - OPR1.170623.026
-lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
-lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so
+# Graphics (SDM) - from cheeseburger - OPR6.170623.013
+
+vendor/lib/libsdm-disp-apis.so
+vendor/lib64/libsdm-disp-apis.so
 vendor/lib64/libscalar.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
@@ -337,21 +338,29 @@ vendor/lib/libsdm-diag.so
 vendor/lib/libsdmextension.so
 vendor/lib/libtinyxml2_1.so
 
-# Graphics (Vulkan) - from TA-1021 - OPR1.170623.026
-vendor/lib/hw/vulkan.msm8937.so
+# Graphics (qdutils HAL) - from cheeseburger - OPR6.170623.013
+lib/vendor.qti.hardware.qdutils_disp@1.0.so
+lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
+vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
+
+# Graphics (Vulkan) - from oneplus3
 vendor/lib64/hw/vulkan.msm8937.so
+vendor/lib/hw/vulkan.msm8937.so
 
 # Keystore - from TA-1021 - OPR1.170623.026
 vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8937.so
 
-# Listen - from TA-1021 - OPR1.170623.026
+# Listen
+vendor/lib/hw/sound_trigger.primary.msm8937.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
-vendor/lib/hw/sound_trigger.primary.msm8937.so
-vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib64/hw/sound_trigger.primary.msm8937.so
+vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Media - from TA-1021 - OPR1.170623.026
 vendor/lib/libI420colorconvert.so
