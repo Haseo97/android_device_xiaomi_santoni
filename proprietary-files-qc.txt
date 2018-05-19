@@ -450,7 +450,7 @@ vendor/lib64/libperipheral_client.so
 
 # Postprocessing - from TA-1021 - OPR1.170623.026
 etc/permissions/com.qti.snapdragon.sdk.display.xml
--framework/com.qti.snapdragon.sdk.display.jar
+framework/com.qti.snapdragon.sdk.display.jar
 lib/libsd_sdk_display.so:vendor/lib/libsd_sdk_display.so
 lib/vendor.display.color@1.0.so
 lib/vendor.display.postproc@1.0.so
