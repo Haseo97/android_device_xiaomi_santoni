@@ -1,1 +1,2 @@
 allow init sysfs_thermal:file w_file_perms;
+allow init unlabeled:file execute:
