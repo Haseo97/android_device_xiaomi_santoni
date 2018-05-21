@@ -4,3 +4,6 @@ allow system_server lirc_device:chr_file rw_file_perms;
 allow system_server qti_debugfs:file r_file_perms;
 allow system_server baseband_prop:file read;
 allow system_server unlabeled:file unlink;
+
+# interact with thermal_config
+set_prop(system_server, thermal_prop)

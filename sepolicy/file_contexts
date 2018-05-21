@@ -46,3 +46,6 @@
 
 # Baseband second
 /vendor/bin/init_baseband.sh                    u:object_r:init_baseband_exec:s0
+
+# Thermal
+vendor/bin/thermal-engine  u:object_r:thermal-engine_exec:s0
